@@ -1,13 +1,13 @@
 //Funcion para tomar el valor de cada boton(numero o operacion) y mostrarlo en pantalla
 function tomarValor(x) {
-     console.log("valor precionado")
+    console.log("valor precionado")
     console.log(x) 
     document.querySelector('#Result').innerHTML += x;
 }
 
 //Funcion para calcular resultado de cada operación (se ejecuta cada que dan click en igual(=))
 function calcularResultado() {
-    let result = eval(document.getElementById('Result').innerHTML);
+    let result = eval(document.querySelector('#Result').innerHTML);
     document.querySelector('#Result').innerHTML = result;
 }
 
