@@ -68,6 +68,7 @@ seven.addEventListener("click", function () {
 })
 eight.addEventListener("click", function () {
     tomarValor(8);
+    teclado(8)
 })
 nine.addEventListener("click", function () {
     tomarValor(9);
@@ -92,3 +93,38 @@ equal.addEventListener("click", function () {
 deleteN.addEventListener("click", function () {
     reset()
 })
+
+
+//Funcion para el uso del teclado
+
+function teclado (elEvento) { 
+    evento = elEvento || window.event;
+    k=evento.keyCode; //número de código de la tecla.
+    //teclas númericas del teclado alfamunérico
+    if (k>47 && k<58) { 
+       p=k-48; //buscar número a mostrar.
+       p=String(p) //convertir a cadena para poder añádir en pantalla.
+       numero(p); //enviar para mostrar en pantalla
+       }	
+    //Teclas del teclado númerico. Seguimos el mismo procedimiento que en el anterior.
+    if (k>95 && k<106) {
+       p=k-96;
+       p=String(p);
+       tomarValor(p);
+       }
+    if (k==110 || k==190) {tomarValor(".")} //teclas de coma decimal
+    if (k==106) {tomarValor('*')} //tecla multiplicación
+    if (k==107) {tomarValor('+')} //tecla suma
+    if (k==109) {tomarValor('-')} //tecla resta
+    if (k==111) {tomarValor('/')} //tecla división
+    if (k==32 || k==13) {calcularResultado()} //Tecla igual: intro o barra espaciadora
+    if (k==8) {reset()} //Retroceso en escritura : tecla retroceso.
+    }
+    window.onload = function(){ //Acciones tras cargar la página
+        pantalla=document.getElementById("textoPantalla");  //elemento pantalla de salida
+        document.onkeydown = teclado;  //función teclado disponible
+        }
+
+      
+
+ 
