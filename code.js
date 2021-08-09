@@ -7,7 +7,7 @@ function tomarValor(x) {
 
 //Funcion para calcular resultado de cada operación (se ejecuta cada que dan click en igual(=))
 function calcularResultado() {
-    let result = eval(document.querySelector('#Result').innerHTML);
+    var result = eval(document.querySelector('#Result').innerHTML);
     document.querySelector('#Result').innerHTML = result;
 }
 
@@ -34,6 +34,7 @@ let multiply = document.querySelector('#multiply');
 let equal = document.querySelector('#equal');
 let deleteN = document.querySelector('#Delete');
 let coma = document.querySelector('#coma');
+let raiz = document.querySelector('#raiz');
 
 
 
@@ -94,6 +95,10 @@ deleteN.addEventListener("click", function () {
     reset()
 })
 
+raiz.addEventListener("click", function () {
+    tomarValor("√");
+})
+
 
 //Funcion para el uso del teclado
 
@@ -121,7 +126,7 @@ function teclado (elEvento) {
     if (k==8) {reset()} //Retroceso en escritura : tecla retroceso.
     }
     window.onload = function(){ //Acciones tras cargar la página
-        pantalla=document.getElementById("textoPantalla");  //elemento pantalla de salida
+        result=document.getElementById("textoPantalla");  //elemento pantalla de salida
         document.onkeydown = teclado;  //función teclado disponible
         }
 
