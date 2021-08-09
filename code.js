@@ -33,15 +33,15 @@ let divide = document.querySelector('#divide');
 let multiply = document.querySelector('#multiply');
 let equal = document.querySelector('#equal');
 let deleteN = document.querySelector('#Delete');
-let coma = document.querySelector('#coma');
+let punto = document.querySelector('#punto');
 let raiz = document.querySelector('#raiz');
 
 
 
 //Agregar el evento del click y llamar la respectiva funcion a ejecutar. 
 
-coma.addEventListener("click", function () {
-    tomarValor(',');
+punto.addEventListener("click", function () {
+    tomarValor('.');
 })
 cero.addEventListener("click", function () {
     tomarValor(0);
