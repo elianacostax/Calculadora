@@ -107,7 +107,7 @@ function teclado (elEvento) {
     if (k>47 && k<58) { 
        p=k-48; //buscar número a mostrar.
        p=String(p) //convertir a cadena para poder añádir en pantalla.
-       numero(p); //enviar para mostrar en pantalla
+       tomarValor(p); //enviar para mostrar en pantalla
        }	
     //Teclas del teclado númerico. Seguimos el mismo procedimiento que en el anterior.
     if (k>95 && k<106) {
