@@ -95,9 +95,7 @@ deleteN.addEventListener("click", function () {
     reset()
 })
 
-raiz.addEventListener("click", function () {
-    tomarValor("√");
-})
+
 
 
 //Funcion para el uso del teclado
