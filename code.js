@@ -1,6 +1,6 @@
 //Funcion para tomar el valor de cada boton(numero o operacion) y mostrarlo en pantalla
 function tomarValor(x) {
-    console.log("valor precionado")
+    console.log("valor presionado")
     console.log(x) 
     document.querySelector('#Result').innerHTML += x;
 }
@@ -10,6 +10,37 @@ function calcularResultado() {
     var result = eval(document.querySelector('#Result').innerHTML);
     document.querySelector('#Result').innerHTML = result;
 }
+
+//Funcion para calcular la raiz cuadrada
+function cal() {
+    var x=Math.sqrt(document.querySelector('#Result').innerHTML) //resolver raíz cuadrada.
+    document.querySelector('#Result').innerHTML = x; //mostrar en pantalla resultado
+}
+
+// Funcion para calcular el porcentaje
+var x;
+function porcent() {
+    x = parseInt(document.querySelector('#Result').innerHTML)/100
+    console.log(x)
+    document.querySelector('#Result').innerHTML = "";
+}
+
+//Ejecutar la funcion final del porcentaje
+function final(){
+    var f= parseInt(document.querySelector('#Result').innerHTML) * x
+    console.log(f)
+    document.querySelector('#Result').innerHTML = f
+}
+
+//Funcion para calcular la potencia
+function potencia()
+    {
+         for(i=0;i<2;i++){
+            var x=parseInt(document.querySelector('#Result').innerHTML) * parseInt(document.querySelector('#Result').innerHTML)}
+        document.querySelector('#Result').innerHTML= x
+    }
+
+
 
 //Funcion para limpiar la calculadora (se ejecuta cada que se le da click en 'C')
 function reset() {
@@ -34,7 +65,6 @@ let multiply = document.querySelector('#multiply');
 let equal = document.querySelector('#equal');
 let deleteN = document.querySelector('#Delete');
 let punto = document.querySelector('#punto');
-let raiz = document.querySelector('#raiz');
 
 
 
@@ -94,8 +124,6 @@ equal.addEventListener("click", function () {
 deleteN.addEventListener("click", function () {
     reset()
 })
-
-
 
 
 //Funcion para el uso del teclado
