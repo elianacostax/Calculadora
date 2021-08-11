@@ -33,12 +33,10 @@ function final(){
 }
 
 //Funcion para calcular la potencia
-function potencia()
-    {
-         for(i=0;i<2;i++){
-            var x=parseInt(document.querySelector('#Result').innerHTML) * parseInt(document.querySelector('#Result').innerHTML)}
-        document.querySelector('#Result').innerHTML= x
-    }
+function potencia(){
+    var x=parseInt(document.querySelector('#Result').innerHTML) * parseInt(document.querySelector('#Result').innerHTML)
+    document.querySelector('#Result').innerHTML= x
+}
 
 
 
