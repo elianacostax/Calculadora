@@ -153,7 +153,4 @@ function teclado (elEvento) {
         result=document.getElementById("textoPantalla");  //elemento pantalla de salida
         document.onkeydown = teclado;  //función teclado disponible
         }
-
-      
-
- 
+        
