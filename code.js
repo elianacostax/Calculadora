@@ -22,7 +22,7 @@ var x;
 function porcent() {
     x = parseInt(document.querySelector('#Result').innerHTML)/100
     console.log(x)
-    document.querySelector('#Result').innerHTML = "";
+    document.querySelector('#Result').innerHTML = x;
 }
 
 //Ejecutar la funcion final del porcentaje
